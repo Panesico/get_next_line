@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: panesico <panesico@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/09 19:59:31 by panesico          #+#    #+#             */
-/*   Updated: 2023/05/09 19:59:31 by panesico         ###   ########.fr       */
+/*   Created: 2023/05/09 20:01:54 by panesico          #+#    #+#             */
+/*   Updated: 2023/05/09 20:01:54 by panesico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_nlsplit(char *buffer)
 {
@@ -82,15 +82,15 @@ char	*ft_read(char *buffer, int fd)
 
 char	*get_next_line(int fd)
 {
-	static char		*buffer;
+	static char		*buffer[256];
 	char			*next_line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
-	buffer = ft_read(buffer, fd);
-	if (!buffer)
+	buffer[fd] = ft_read(buffer[fd], fd);
+	if (!buffer[fd])
 		return (0);
-	next_line = ft_next_line(buffer);
-	buffer = ft_nlsplit(buffer);
+	next_line = ft_next_line(buffer[fd]);
+	buffer[fd] = ft_nlsplit(buffer[fd]);
 	return (next_line);
 }

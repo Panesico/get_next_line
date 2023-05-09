@@ -1,1 +1,0 @@
-CMakeLists.txt not found in /home/panesico/CLionProjects/get_next_line Select CMakeLists.txt

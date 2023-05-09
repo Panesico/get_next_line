@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: panesico <panesico@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/09 20:02:47 by panesico          #+#    #+#             */
-/*   Updated: 2023/05/09 20:02:47 by panesico         ###   ########.fr       */
+/*   Created: 2023/05/09 20:03:31 by panesico          #+#    #+#             */
+/*   Updated: 2023/05/09 20:03:31 by panesico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {
